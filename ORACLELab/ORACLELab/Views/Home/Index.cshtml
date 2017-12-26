@@ -1,0 +1,21 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+<div class="bg">
+    <div class="row">
+        <div class="col-lg-6 text-center col-lg-offset-3" style="margin-top:300px;">
+            <p style="font-size:40px; outline:3px solid white; outline-offset: 15px; color:white; "> Welcome to the NYC Marketing Data Warehouse, where we know our consumers.</p>
+        </div>
+    </div>
+    
+    @if (User.Identity.IsAuthenticated)
+    { }
+    else
+    {
+    <div class="row" style="margin-top: 40px">
+        <div class="col-lg-1 col-lg-offset-5 text-center btn" style="margin-left:45%">
+            <h3 style="outline:3px solid white; outline-offset: 15px; color: white;"><a href="~/Account/Login">Log in</a></h3>
+        </div>
+    </div>
+    }
+</div>

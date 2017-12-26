@@ -1,0 +1,50 @@
+﻿
+@{
+    ViewBag.Title = "InsertClientForm";
+}
+<div class="container">
+    <h2 class="text-center">Add Client Form</h2>
+
+    <form action="addClient">
+        <div class="form-group">
+            <div class="col-md-6">
+                <label for="lastName">Last Name</label>
+                <input type="text" class="form-control" id="lastName" name="LName" placeholder="Last Name" maxlength="30"/>
+            </div>
+            <div class="col-md-6">
+                <label for="firstName">First Name</label>
+                <input type="text" class="form-control" id="firstName" name="FName" placeholder="First Name" maxlength="30" />
+            </div>
+        </div>
+        <br /> <br />
+        <div class="form-group">
+            <div class="col-md-6">
+                <label for="StreetAddress">Street Address</label>
+                <input type="text" class="form-control" id="StreetAddress" name="StreetAddress" placeholder="466 East 10th Street" maxlength="50" />
+            </div>
+            <div class="col-md-6">
+                <label for="Zip">Zip</label>
+                <input type="text" class="form-control" id="Zip" name="Zip" placeholder="10001" maxlength="5" />
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-6">
+                <label for="Borough">Borough</label>
+                <select class="form-control" id="Borough" name="Borough">
+                    <option>MA</option>
+                    <option>BK</option>
+                    <option>Qu</option>
+                    <option>BX</option>
+                    <option>ST</option>
+                </select>
+            </div>
+            <div class="col-md-6">
+                <label for="DateOfBirth">DOB</label>
+                <input type="text" class="form-control" id="DateOfBirth" name="DateOfBirth" placeholder="06/4/1995" maxlength="15" />
+            </div>
+        </div>
+        <div class="form-group">
+            <button type="submit" class="btn btn-primary" style="margin-top:20px;">Submit</button>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,63 @@
+﻿
+@{
+    ViewBag.Title = "ViewClients";
+}
+
+<div id="viewClient">
+    <div class="container">
+        <div class="row">
+                <div class="col-md-6">
+                    <h2 style="color:white;">View Clients</h2>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="dropdown" style="margin-top:25px;">
+                        <button class="btn btn-default dropdown-toggle" type="button" id="borough" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                            Select Borough 
+                            <span class="caret"></span>
+                        </button> 
+                        <ul class="dropdown-menu" aria-labelledby="borough">
+                            <li><a href="ViewClients">All</a></li>
+                            <li><a href="ViewClients?selectedBorough=MA">MA</a></li>
+                            <li><a href="ViewClients?selectedBorough=BK">BK</a></li>
+                            <li><a href="ViewClients?selectedBorough=Qu">Qu</a></li>
+                            <li><a href="ViewClients?selectedBorough=BX">BX</a></li>
+                            <li><a href="ViewClients?selectedBorough=ST">ST</a></li>
+                       </ul>
+                    </div>
+                </div>
+        </div>
+
+
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th style="color:white;">First Name</th>
+                    <th style="color:white;">Last Name</th>
+                    <th style="color:white;">Street Address</th>
+                    <th style="color:white;">Zip</th>
+                    <th style="color:white;">Date Of Birth</th>
+                    <th style="color:white;">Borough</th>
+                    <th style="color:white;">Update</th>
+                    <th style="color:white;">Delete</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var client in ViewBag.Clients)
+                {
+                    <tr>
+                        <td class="success">@client.FName</td>
+                        <td class="success">@client.LName</td>
+                        <td class="success">@client.StreetAddress</td>
+                        <td class="success">@client.Zip</td>
+                        <td class="success">@client.DateOfBirth</td>
+                        <td class="success">@client.Borough</td>
+                        <td class="success"><a href="UpdateClientForm?clientID=@client.ClientID">Update</a></td>
+                        <td class="success"><a href="DeleteClient?clientID=@client.ClientID">Delete</a></td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
